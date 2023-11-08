@@ -33,6 +33,11 @@ public class Skier implements Serializable {
 
 	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
 	Subscription subscription;
+//generate constactor
+	public Skier(String firstName) {
+		this.firstName = firstName;
+	}	
+	
 
 	@JsonIgnore
 	@ManyToMany
